@@ -1,24 +1,44 @@
 {
-	"name": "obsidian-sample-plugin",
-	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
-	"main": "main.js",
-	"scripts": {
-		"dev": "node esbuild.config.mjs",
-		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
-		"version": "node version-bump.mjs && git add manifest.json versions.json"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "MIT",
-	"devDependencies": {
-		"@types/node": "^16.11.6",
-		"@typescript-eslint/eslint-plugin": "5.29.0",
-		"@typescript-eslint/parser": "5.29.0",
-		"builtin-modules": "3.3.0",
-		"esbuild": "0.17.3",
-		"obsidian": "latest",
-		"tslib": "2.4.0",
-		"typescript": "4.7.4"
-	}
+  "name": "obsidian-sample-plugin",
+  "version": "1.0.0",
+  "description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+  "license": "MIT",
+  "main": "src/main.ts",
+  "author": "",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "prebuild": "rimraf dist/*",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "postbuild": "cp src/styles.css dist/styles.css && cp src/manifest.json dist/manifest.json",
+    "version": "node version-bump.mjs && git add manifest.json versions.json",
+    "format": "bunx @biomejs/biome format --write src",
+    "lint": "bunx @biomejs/biome lint --write src",
+    "check": "bunx @biomejs/biome check --write src",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@commitlint/cli": "19.4.1",
+    "@commitlint/config-conventional": "19.4.1",
+    "@commitlint/cz-commitlint": "19.4.0",
+    "@types/bun": "^1.1.8",
+    "@types/node": "^22.5.1",
+    "@typescript-eslint/eslint-plugin": "8.3.0",
+    "@typescript-eslint/parser": "8.3.0",
+    "builtin-modules": "4.0.0",
+    "commitlint": "^19.4.1",
+    "esbuild": "0.23.1",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
+    "obsidian": "^1.6.6",
+    "rimraf": "^6.0.1",
+    "tslib": "2.7.0",
+    "typescript": "5.5.4"
+  }
 }

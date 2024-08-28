@@ -1,0 +1,16 @@
+services:
+  obsidian_sample_plugin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUN_VERSION: 1.1.26
+    volumes:
+      - node_modules:/home/bun/app/node_modules
+      - ../:/home/bun/app:cached
+      - $HOME/Documents/Obsidian Vault/.obsidian/plugins/obsidian_bluesky_plugin:/home/bun/app/dist:cached
+    tty: true
+    stdin_open: true
+
+volumes:
+  node_modules:
