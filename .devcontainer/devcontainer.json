@@ -17,6 +17,9 @@
 			"version": "20.17.0"
 		},
 		"ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/dhoeric/features/act:1": {
+      "version": "0.2.65"
+    },
 		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
 			"moby": false,
 			"dockerDashComposeVersion": "v2"
