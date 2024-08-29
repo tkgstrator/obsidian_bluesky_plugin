@@ -1,5 +1,5 @@
 services:
-  obsidian_sample_plugin:
+  obsidian_bluesky_plugin:
     build:
       context: .
       dockerfile: Dockerfile
