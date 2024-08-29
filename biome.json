@@ -9,13 +9,14 @@
       "recommended": true,
       "suspicious": {
         "noDoubleEquals": "error",
-        "noAssignInExpressions": "error",
+        "noAssignInExpressions": "off",
         "noExplicitAny": "off",
         "noPrototypeBuiltins": "error",
         "noGlobalIsNan": "error",
         "noImplicitAnyLet": "error"
       },
       "correctness": {
+        "useExhaustiveDependencies": "off",
         "noSwitchDeclarations": "off",
         "noVoidTypeReturn": "error"
       },
@@ -30,9 +31,14 @@
         "useOptionalChain": "error"
       },
       "style": {
+        "useImportType": {
+          "level": "off",
+          "fix": "none"
+        },
         "useDefaultParameterLast": "error",
         "noUselessElse": "error",
         "noParameterAssign": "error",
+        "noInferrableTypes": "off",
         "noUnusedTemplateLiteral": "error",
         "useTemplate": "error",
         "useSingleVarDeclarator": "error",
