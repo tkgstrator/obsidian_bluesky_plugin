@@ -1,10 +1,10 @@
 {
-  "name": "obsidian-sample-plugin",
-  "version": "1.0.0",
-  "description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+  "name": "obsidian-blusky-plugin",
+  "version": "0.1.0",
+  "description": "Display timeline and post notes using Bluesky API.",
   "license": "MIT",
   "main": "src/main.ts",
-  "author": "",
+  "author": "tkgstrator",
   "scripts": {
     "dev": "node esbuild.config.mjs",
     "prebuild": "rimraf dist/*",
