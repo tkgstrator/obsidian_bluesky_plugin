@@ -31,11 +31,11 @@ export default class CitrusPlugin extends Plugin {
 
   async loadSettings() {
     this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData())
-    const result = await this.client.login(this.settings)
   }
 
   async saveSettings() {
     await this.saveData(this.settings)
+    const result = await this.client.login(this.settings)
   }
 
   async toggleView() {
