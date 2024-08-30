@@ -30,6 +30,6 @@ This plugin is not currently registrered as a community plugin and must be added
 
 #### Manual Installation
 
-1. Go to [Releases](https://github.com/tkgstraotr/obsidian_bluesky_plugin/releases) and download ZIP file.
+1. Go to [Releases](https://github.com/tkgstrator/obsidian_bluesky_plugin/releases) and download ZIP file.
 2. Extract ZIP file to Obsidian plugins directory.
 3. Proceed to Setup.

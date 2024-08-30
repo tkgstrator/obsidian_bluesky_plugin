@@ -8,7 +8,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-20.04
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == github.event.repository.default_branch
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -43,7 +43,7 @@ jobs:
           release_name: ${{ steps.current_version.outputs.version }}
           draft: false
           prerelease: false
-          target_commitish: ${{ github.ref_name }}
+          commitish: ${{ github.event.repository.default_branch }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Release
@@ -53,3 +53,5 @@ jobs:
           asset_path: output/artifacts.zip
           asset_name: citrus_bluesky_plugin_${{ steps.current_version.outputs.version }}.zip
           asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
