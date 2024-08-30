@@ -1,11 +1,11 @@
 {
-	"id": "citrus-bluesky-plugin",
-	"name": "Citrus",
-	"version": "0.1.0",
-	"minAppVersion": "0.15.0",
-	"description": "Display timeline and post notes using Bluesky API.",
-	"author": "tkgstrator",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": true
+  "id": "citrus",
+  "name": "Citrus",
+  "version": "0.1.0",
+  "minAppVersion": "0.15.0",
+  "description": "Display timeline and post notes using Bluesky API.",
+  "author": "tkgstrator",
+  "authorUrl": "https://obsidian.md",
+  "fundingUrl": "https://obsidian.md/pricing",
+  "isDesktopOnly": true
 }
