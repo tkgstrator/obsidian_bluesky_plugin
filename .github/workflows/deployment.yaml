@@ -53,3 +53,5 @@ jobs:
           asset_path: output/artifacts.zip
           asset_name: citrus_bluesky_plugin_${{ steps.current_version.outputs.version }}.zip
           asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
