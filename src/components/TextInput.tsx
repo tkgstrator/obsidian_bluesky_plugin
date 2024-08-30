@@ -21,10 +21,7 @@ const TextInput: React.FC<TextInputProps> = ({ inputMessage, setInputMessage, ha
         value={inputMessage}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
-      >
-        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-        <button onClick={handleSendMessage}>Post</button>
-      </textarea>
+      />
     </div>
   )
 }
