@@ -1,4 +1,4 @@
-name: Pull request code review by ChatGPT
+name: Code Review
 on:
   pull_request:
     types: [opened, reopened, ready_for_review, synchronize]
