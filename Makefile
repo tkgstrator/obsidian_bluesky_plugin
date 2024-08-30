@@ -8,9 +8,13 @@ PHONY: check
 check:
 	act -j check -P ubuntu-24.04=catthehacker/ubuntu:act-22.04
 
+# PHONY: deploy
+# deploy:
+# 	act -j deploy -P ubuntu-24.04=catthehacker/ubuntu:act-22.04 -s GITHUB_TOKEN=${GITHUB_TOKEN} --eventpath .github/pull_request.closed.develop.json
+
 PHONY: deploy
 deploy:
-	act -j deploy -P ubuntu-24.04=catthehacker/ubuntu:act-22.04 -s GITHUB_TOKEN=${GITHUB_TOKEN} --eventpath .github/pull_request.closed.develop.json
+	act -j deploy -P ubuntu-24.04=catthehacker/ubuntu:act-22.04 -s GITHUB_TOKEN=${GITHUB_TOKEN} --eventpath .github/push.default.json
 
 PHONY: validate
 validate:
