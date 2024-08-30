@@ -12,9 +12,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        # with:
-        #   ref: ${{ github.event.pull_request.merge_commit_sha }}
+        with:
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
       - name: Install
+        if: ${{ github.event.head.user.login == 'act' }}
         run: |
           apt-get update
           apt-get install -y unzip zip jq
@@ -39,7 +40,7 @@ jobs:
         uses: actions/create-release@v1
         with:
           tag_name: ${{ steps.current_version.outputs.version }}
-          release_name: Release ${{ steps.current_version.outputs.version }}
+          release_name: ${{ steps.current_version.outputs.version }}
           draft: false
           prerelease: false
           target_commitish: ${{ github.ref_name }}
@@ -50,5 +51,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: output/artifacts.zip
-          asset_name: artifacts.zip
+          asset_name: citrus_bluesky_plugin_${{ steps.current_version.outputs.version }}.zip
           asset_content_type: application/zip
