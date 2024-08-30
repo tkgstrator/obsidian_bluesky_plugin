@@ -16,7 +16,7 @@ jobs:
       pull-requests: write
       contents: write
     steps:
-      - name: Review codes with ChatGPT
+      - name: Review
         id: pragent
         uses: Codium-ai/pr-agent@main
         env:
