@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 type TextInputProps = {
   inputMessage: string
@@ -7,7 +7,7 @@ type TextInputProps = {
   handleSendMessage: () => void
 }
 
-const TextInput: React.FC<TextInputProps> = ({ inputMessage, setInputMessage, handleKeyDown, handleSendMessage }) => {
+const TextInput: React.FC<TextInputProps> = ({ inputMessage, setInputMessage, handleKeyDown }) => {
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const inputValue: string = event.target.value
     setInputMessage(inputValue)

@@ -4,7 +4,6 @@ import { FeedViewPost } from '@atproto/api/dist/client/types/app/bsky/feed/defs'
 
 export class BTClient {
   private readonly agent: BskyAgent
-  private settings: CitrusSettings
 
   constructor() {
     this.agent = new BskyAgent({

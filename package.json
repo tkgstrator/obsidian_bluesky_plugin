@@ -1,6 +1,6 @@
 {
   "name": "obsidian-blusky-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display timeline and post notes using Bluesky API.",
   "license": "MIT",
   "main": "src/main.ts",
