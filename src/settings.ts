@@ -1,4 +1,4 @@
-import { type App, PluginSettingTab, Setting, TextComponent } from 'obsidian'
+import { type App, PluginSettingTab, Setting } from 'obsidian'
 import type Citrus from './main'
 
 export interface CitrusSettings {

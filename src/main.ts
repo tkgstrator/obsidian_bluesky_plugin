@@ -1,4 +1,4 @@
-import { type Editor, MarkdownView, Plugin, TFile, type WorkspaceLeaf } from 'obsidian'
+import { Plugin, type WorkspaceLeaf } from 'obsidian'
 import { CitrusSettingTab, type CitrusSettings, DEFAULT_SETTINGS } from './settings'
 import { BTClient } from './utils/client'
 import { VIEWTYPE } from './utils/contants'
@@ -35,7 +35,7 @@ export default class CitrusPlugin extends Plugin {
 
   async saveSettings() {
     await this.saveData(this.settings)
-    const result = await this.client.login(this.settings)
+    await this.client.login(this.settings)
   }
 
   async toggleView() {
