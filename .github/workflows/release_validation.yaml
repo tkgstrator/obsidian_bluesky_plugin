@@ -2,11 +2,13 @@ name: Release Validation
 on:
   pull_request:
     types: [opened, reopened, ready_for_review, synchronize]
+    paths:
+      - package.json
 
 jobs:
   validation:
     name: Validation
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
