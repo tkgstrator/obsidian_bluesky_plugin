@@ -2,6 +2,8 @@ name: Release Validation
 on:
   pull_request:
     types: [opened, reopened, ready_for_review, synchronize]
+    paths:
+      - package.json
 
 jobs:
   validation:
